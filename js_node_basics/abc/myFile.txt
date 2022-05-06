@@ -1,0 +1,7 @@
+Hello, world!
+Apples
+Bananas
+Cherry
+Donuts
+Watermelons
+Pears

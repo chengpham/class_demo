@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+<h1>Edit Bill</h1>
+<form action='/bills/<%= bills.id%>' method='POST'>
+    <input type='hidden' name='_method' value='PATCH'>
+    <div class='form-group'>
+        <div>
+            <label for="total"> Bill Total</label><br/>
+            <input type="text" id="total" name="total" value='<%= bills.bill_total?bills.bill_total:'' %>' required/>
+        </div>
+        <div>
+            <label for="tax"> Tax Percent</label><br/>
+            <select name="tax" id="tax" name="tax" >
+                <% for (let i=0; i<=100; i++){ %>
+                <option value="<%= i %>">
+                <%= 
+                    i %>%</option>
+                <% } %>
+            </select>
+        </div>
+        <div>
+            <label for="tip"> Tip Percent</label><br/>
+            <select name="tip" id="tip" name="tip">
+                <% for (let i=0; i<=100; i++){ %>
+                    <option value="<%= i %>"><%= i %>%</option>
+                <% } %>
+            </select>
+        </div>
+        <div>
+            <label for="size"> Group Size</label><br/>
+            <select name="size" id="size" name="size" required>
+                <% for (let i=0; i<=100; i++){ %>
+                <option value="<%= i %>">
+                    <%= i %></option>
+                <% } %>
+            </select>
+        </div>
+    </div> 
+    <input type='submit' value='Submit' class='btn btn-outline-success'>
+</form>
+<form action='/bills/<%= bills.id %>' method='POST'>
+    <input type='hidden' name='_method' value='DELETE'>
+    <input type='submit' class='btn btn-outline-danger' value='Delete'>
+    </form>
+<%- include('../partials/footer') %></input>

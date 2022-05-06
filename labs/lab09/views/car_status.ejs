@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Years</title>
+</head>
+<body>
+    <h1>Car Years</h1>
+    <div>
+        <%= year %>
+        <% if (year > 2020){ %> 
+             <p>future</p>
+            <% } %>
+        <% if (year > 2015 && year <= 2020){ %> 
+            <p>new</p>
+            <% } %>
+        <% if (year > 2010 && year <= 2015){ %> 
+            <p>old</p>
+            <% } %>
+        <% if (year < 2010){ %> 
+            <p>very old</p>
+            <% } %>
+    </div>
+    <form>
+        <div>
+            <label for="year">What year is your car?</label>
+            <select name="year" id="year" name="year">
+                <% for (let i=1950; i<+2025; i++){ %>
+                <option value="<%= i %>"><%= i %></option>
+                <% } %>
+            </select>
+            <br/>
+            <input type='submit' value='submit'>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+-- Create a student record with the following attributes: first_name: John, last_name: Smith, Age: 45, email: john@smith.com registration_date: January 1st 2016, phone_number: 778.778.7787
+-- Select that student from the database by fetching the last record
+-- Using the id you fetched from the previous exercise, update the age of that record to become 50
+-- Delete that record using its id
+
+-- INSERT INTO students (first_name,last_name,age,email,registration_date,phone_number) VALUES ('John', 'Smith', 45, 'john@smith.com', '2016-01-01'::timestamp, '778-778-7787');
+-- SELECT * FROM students WHERE first_name='John' AND last_name='Smith';
+-- UPDATE students SET age=50 WHERE id=504;
+-- SELECT * FROM students WHERE first_name='John' AND last_name='Smith';
+-- DELETE FROM students WHERE id=504;
+-- SELECT * FROM students WHERE first_name='John' AND last_name='Smith';

@@ -1,0 +1,14 @@
+<%- include('../partials/header')  %>
+
+<h1>New Note</h1>
+<form action='/notes' method='POST'>
+    <div class='form-group'></div>
+        <%= notes?notes.id:'' %>
+    
+    
+    <div class='form-group'>
+        <textarea class='form-control' name='content' cols='60' rows='5' placeholder='What are you thoughts?'><%= notes?notes.content:'' %></textarea>
+    </div> 
+    <input type='submit' value='Submit' class='btn btn-outline-success'>
+</form>
+<%- include('../partials/footer')  %>

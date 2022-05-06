@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+<h1>Edit Post</h1>
+<form action='/posts/<%= post.id%>' method='POST'>
+    <input type='hidden' name='_method' value='PATCH'>
+    
+    <%- include('./partials/forminputs') %>
+    <input type='submit' value='Submit' class='btn btn-outline-success'>
+</form>
+<%- include('../partials/footer') %>

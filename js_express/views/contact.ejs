@@ -1,0 +1,26 @@
+
+<%- include('./partials/header') %>
+
+    <h1>Contact Us</h1>
+    <form action="/thank_you">
+        <div>
+            <label for="fullname"> What is your full name?</label>
+            <br/>
+            <input type="text" id="fullname" name="fullname"/>
+            </div>
+        <div>
+            <label  for='email'>Whats your email?</label>
+            <br/>
+            <input type='text' id='email' name='email'/>
+        </div>
+        <div>
+            <label  for='message'>Whats your message?</label>
+            <br/>
+            <textarea rows="5" cols="50" id="message" name="message"></textarea>
+        </div>
+        <input type="submit" value="send"/>
+    </form>
+ 
+
+</body>
+</html>

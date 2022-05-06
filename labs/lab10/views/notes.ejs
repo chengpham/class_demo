@@ -1,0 +1,28 @@
+<%- include('./partials/header') %>
+
+    <h1>List of your notes</h1>
+    
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Todo List</h5>
+            <p class="card-text">
+                <ul>
+                    <% if(notes){ %>
+                        <% for (note of notes){ %>
+                            <li> <%= note %></li>
+                        <% } %>
+                        
+                    <% } %>
+                    </ul>
+            </p>
+            <span>
+                <a href="/reminder" class="btn btn-primary">Add to List</a>
+                <form action='/clear' method="POST">
+                    <button type='submit' class="btn btn-primary">Clear</button>
+                </form>
+            </span>
+            
+        </div>
+    </div>
+<%- include('./partials/footer') %>

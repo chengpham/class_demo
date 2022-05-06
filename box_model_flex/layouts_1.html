@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            align-items: stretch;
+            width: 100vw;
+            height: 100vh;
+            justify-content: space-around;
+        }
+        div{
+            background-color: brown;
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-shrink: 1;
+            width: 200px;
+        }
+        #last-div{
+            flex-shrink: 4;
+        }
+    </style>
+</head>
+<body>
+    <main id='container'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div id='last-div'>4</div>
+    </main>
+</body>
+</html>

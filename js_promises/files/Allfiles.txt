@@ -1,0 +1,19 @@
+
+apples
+oranges
+grapes
+bananas
+
+dogs
+cats
+birds
+horse
+
+planes
+cars
+boats
+trucks
+
+hello world
+this is textfile
+

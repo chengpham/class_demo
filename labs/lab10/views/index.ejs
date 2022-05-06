@@ -1,0 +1,14 @@
+<%- include('./partials/header') %>
+
+    <% if(language == 'english'){ %>
+        <h1>Hello Tam</h1>
+    <% } else if (language == 'french') { %>
+        <h1>Bonjour Tam</h1>
+    <% } else if (language == 'spanish') { %>
+        <h1>Hola Tam</h1>
+    <% } else { %>
+    <h1> Welcome to My Awesome Website</h1>
+    <% } %>
+    
+
+<%- include('./partials/footer') %>

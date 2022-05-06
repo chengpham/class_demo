@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h1> Your bill: </h1>
+<div class='card mb-4'>
+    <div class='card-body'>
+            Bill Total: $<%= bill.bill_total%><br>
+            Tax Percentage: <%= bill.tax_percent%>% <br>
+            Tip Percentage: <%= bill.tip_percent%>%<br>
+            Group Size: <%= bill.group_size%><br> 
+            Split Cost: <h2>$<%= (bill.bill_total
+                            *(bill.tax_percent/100+1)
+                            *(bill.tip_percent/100+1)
+                            /bill.group_size).toFixed(2)%></h2> 
+        <a class='btn btn-outline-success' href='/bills/<%= bill.id %>/edit'>Edit</a>
+    </div>
+</div>
+      <form action='/bills/<%= bill.id %>' method='POST'>
+        <input type='hidden' name='_method' value='DELETE'>
+        <input type='submit' class='btn btn-outline-danger' value='Delete'>
+        </form>
+    </div>
+  </div>
+<%- include('../partials/footer') %>

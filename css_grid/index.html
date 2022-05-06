@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 8fr;
+            gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+            padding: 1em;
+        }
+        .grid > div {
+            background: #ddd;
+            padding: 1em;
+        }
+        .grid > div:nth-child(odd) {
+            background: darkgrey;
+        }
+        .box1 {
+            grid-column: 1 / -1;
+        }
+        .box2 {
+            grid-column: 1;
+        }
+        .box3 {
+            grid-column: 2 / -1;
+        }
+        .box4 {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class='box1'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error recusandae quisquam at reiciendis molestias modi nam eveniet quaerat incidunt vero.
+        </div>
+        <div class='box2'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sit sunt error! Repellendus, molestias dolor, blanditiis voluptas perferendis porro, dolores ea est consequatur facilis aperiam adipisci ullam vel nam deleniti?
+        </div>
+        <div class='box3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit necessitatibus soluta dolores qui corrupti! Possimus molestiae unde hic! Odio delectus maxime laudantium veniam necessitatibus, ducimus aspernatur vel ipsum animi omnis, fuga, repudiandae et quam similique tempore? Nihil ducimus harum quae repellat, sunt sed tenetur esse recusandae animi a porro. Harum non voluptates eius consequatur, alias assumenda repellendus tenetur officia perspiciatis sit sed minus laboriosam totam tempora atque facilis ea aut aperiam exercitationem pariatur dolor esse earum sequi id. Iste, totam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, saepe optio laborum dolor debitis possimus pariatur vitae sequi libero, totam delectus esse commodi recusandae earum dolores quasi nihil id inventore ea suscipit modi laboriosam iure beatae? Eaque deleniti molestias dolores quasi maiores minus, corporis voluptatum ad. Perferendis consequatur quasi deleniti quibusdam temporibus accusamus ducimus, necessitatibus laudantium pariatur nostrum iusto ratione sequi recusandae sint esse obcaecati explicabo tempora voluptatem minus sunt illo animi impedit! Ab modi voluptatibus maxime. Vero, repellendus modi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit necessitatibus soluta dolores qui corrupti! Possimus molestiae unde hic! Odio delectus maxime laudantium veniam necessitatibus, ducimus aspernatur vel ipsum animi omnis, fuga, repudiandae et quam similique tempore? Nihil ducimus harum quae repellat, sunt sed tenetur esse recusandae animi a porro. Harum non voluptates eius consequatur, alias assumenda repellendus tenetur officia perspiciatis sit sed minus laboriosam totam tempora atque facilis ea aut aperiam exercitationem pariatur dolor esse earum sequi id. Iste, totam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, saepe optio laborum dolor debitis possimus pariatur vitae sequi libero, totam delectus esse commodi recusandae earum dolores quasi nihil id inventore ea suscipit modi laboriosam iure beatae? Eaque deleniti molestias dolores quasi maiores minus, corporis voluptatum ad. Perferendis consequatur quasi deleniti quibusdam temporibus accusamus ducimus, necessitatibus laudantium pariatur nostrum iusto ratione sequi recusandae sint esse obcaecati explicabo tempora voluptatem minus sunt illo animi impedit! Ab modi voluptatibus maxime. Vero, repellendus modi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit necessitatibus soluta dolores qui corrupti! Possimus molestiae unde hic! Odio delectus maxime laudantium veniam necessitatibus, ducimus aspernatur vel ipsum animi omnis, fuga, repudiandae et quam similique tempore? Nihil ducimus harum quae repellat, sunt sed tenetur esse recusandae animi a porro. Harum non voluptates eius consequatur, alias assumenda repellendus tenetur officia perspiciatis sit sed minus laboriosam totam tempora atque facilis ea aut aperiam exercitationem pariatur dolor esse earum sequi id. Iste, totam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, saepe optio laborum dolor debitis possimus pariatur vitae sequi libero, totam delectus esse commodi recusandae earum dolores quasi nihil id inventore ea suscipit modi laboriosam iure beatae? Eaque deleniti molestias dolores quasi maiores minus, corporis voluptatum ad. Perferendis consequatur quasi deleniti quibusdam temporibus accusamus ducimus, necessitatibus laudantium pariatur nostrum iusto ratione sequi recusandae sint esse obcaecati explicabo tempora voluptatem minus sunt illo animi impedit! Ab modi voluptatibus maxime. Vero, repellendus modi!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit necessitatibus soluta dolores qui corrupti! Possimus molestiae unde hic! Odio delectus maxime laudantium veniam necessitatibus, ducimus aspernatur vel ipsum animi omnis, fuga, repudiandae et quam similique tempore? Nihil ducimus harum quae repellat, sunt sed tenetur esse recusandae animi a porro. Harum non voluptates eius consequatur, alias assumenda repellendus tenetur officia perspiciatis sit sed minus laboriosam totam tempora atque facilis ea aut aperiam exercitationem pariatur dolor esse earum sequi id. Iste, totam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, saepe optio laborum dolor debitis possimus pariatur vitae sequi libero, totam delectus esse commodi recusandae earum dolores quasi nihil id inventore ea suscipit modi laboriosam iure beatae? Eaque deleniti molestias dolores quasi maiores minus, corporis voluptatum ad. Perferendis consequatur quasi deleniti quibusdam temporibus accusamus ducimus, necessitatibus laudantium pariatur nostrum iusto ratione sequi recusandae sint esse obcaecati explicabo tempora voluptatem minus sunt illo animi impedit! Ab modi voluptatibus maxime. Vero, repellendus modi!
+        </div>
+        <div class='box4'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, eum voluptas? Quidem, neque consectetur omnis labore distinctio fugiat unde culpa beatae in possimus a at maxime exercitationem odit quia, laudantium aut sit autem enim perspiciatis vel, sed eligendi quae! Cum.
+        </div>
+    </div>
+</body>
+</html>

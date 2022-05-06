@@ -1,0 +1,28 @@
+<div>
+    <a href="/welcome">Welcome</a> 
+    |
+    <a href="/survey">Survey</a> 
+    |
+    <a href="/contact">Contact Us</a>
+    |
+    <a href='/posts'>Posts Index</a>
+    |
+    <a href='/posts/new'>New Post</a>
+
+
+    <% if(username){ %>
+        <span class='navbar-text text-dark'>
+            <%= username %>
+        </span>
+        <form action='/sign_out' method="POST">
+            <button type='submit' class='btn btn-outline-dark'>Sign Out</button>
+          </form>
+        <% } else { %>
+    <form action='/sign_in' method="POST" class='form-inline'>
+        <input class='form-control mr-2' name='username' placeholder='Username'>
+        <button type='submit' class='btn btn-outline-dark'>Sign In</button>
+      </form>
+      <% } %>
+      
+
+</div>

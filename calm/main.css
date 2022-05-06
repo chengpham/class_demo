@@ -1,0 +1,15 @@
+#box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #f0f, #6fb);
+  }
+  
+  #circle {
+    position: relative;
+    border-radius: 100%;
+    background: linear-gradient(0deg, #6fb, #f0f);
+    margin: 0 auto;
+  }

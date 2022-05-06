@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Lab 10</title>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <style>
+    .top_right{
+      position: fixed;
+      top: 0%;
+      right: 0%
+    }
+  </style>
+</head>
+<body>
+    <span>
+        <a href='/'>Home</a>|
+        <a href="/language">Preferred Language</a>|
+        <a href="/notes">Notes</a>|
+        <a href="/reminder">Reminder</a>|
+
+    </span>
+    <span class='top_right'>
+      <% if(username){ %>
+        <span class='navbar-text text-dark'>
+            <%= username %>
+        </span>
+        <form action='/logout' method="POST">
+            <button type='submit' class='btn btn-outline-dark'>Logout</button>
+          </form>
+        <% } else { %>
+    <form action='/login' method="POST" class='form-inline'>
+        <input name='username' placeholder='Username'>
+        <button type='submit' class='btn btn-outline-dark'>Login</button>
+      </form>
+      <% } %>
+    </span><br/><br/><br/><br/>
+    <main class="container">
+    
+    

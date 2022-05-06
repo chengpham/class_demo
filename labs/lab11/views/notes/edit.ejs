@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<h1>Edit Notes</h1>
+<form action='/notes/<%= notes.id%>' method='POST'>
+    <input type='hidden' name='_method' value='PATCH'>
+    <div class='form-group'>
+        <textarea class='form-control' name='content' cols='60' rows='5' placeholder='What are you thoughts?'><%= notes?notes.content:'' %></textarea>
+    </div> 
+    <em>Note made at <%= new Date(notes.created_at).toLocaleString() %></em>
+    <div>
+    <input type='submit' value='Submit' class='btn btn-outline-success'>
+</div>
+</form>
+<form action='/notes/<%= notes.id %>' method='POST'>
+    <input type='hidden' name='_method' value='DELETE'>
+    <input type='submit' class='btn btn-outline-danger' value='Delete'>
+    </form>
+<%- include('../partials/footer') %>
